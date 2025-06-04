@@ -1,0 +1,72 @@
+\documentclass[14pt,openany,a4paper,oneside]{extarticle}
+\usepackage{mmap}
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel} 
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm}
+\usepackage[unicode, pdftex]{hyperref}
+\linespread{1}
+\setlength{\parindent}{1.25 cm}
+\usepackage[a-1b,usecharset]{pdfx}
+\usepackage[a4paper, mag=1000, left=3cm, right=2cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm]{geometry}
+\pagestyle{plain}
+\usepackage{wrapfig}
+\usepackage{mathrsfs}
+\usepackage{mathtext}
+\usepackage{epsf}
+\usepackage{cite}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{ifpdf}
+\usepackage{tocvsec2}
+\usepackage[normalem]{ulem} 
+\usepackage{setspace}
+\DeclareMathOperator{\tr}{tr}
+\sloppy
+\setcounter{tocdepth}{4}
+\raggedbottom
+\setlength{\parskip}{\medskipamount}
+\renewcommand{\baselinestretch}{1} 
+\usepackage{lastpage}
+\makeatletter
+\renewcommand{\@makecaption}[2]{
+	\vspace{\abovecaptionskip}
+	\sbox{\@tempboxa}{#1. #2} \ifdim \wd\@tempboxa > \hsize #1. #2\par
+	\else \global\@minipagefalse \hbox \to \hsize {\hfil #1. #2\hfil}
+	\fi \vspace{\belowcaptionskip}}
+\makeatother
+\usepackage[labelsep=period]{caption}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{minted}
+\usepackage{dirtree}
+\captionsetup[figure]{labelfont={bf}}
+\begin{document}
+	\setcounter{page}{2}
+	\section*{Реферат}
+	\thispagestyle{empty}
+	
+	Объем 23 с., 2 гл., 6 рис., 1 табл., 5 источников, 1 прил.
+	
+	\textbf{Простые числа, криптография, генерация чисел, вероятностные тесты, алгоритм Миллера–Рабина.}
+	
+	Объектом исследования данной работы является задача построения больших простых чисел, необходимых для криптографических систем.
+	
+	Цель работы — исследование теоретико-числовых основ и практических алгоритмов генерации больших простых чисел, применяемых в современных криптографических протоколах, на примере реализации на языке Python.
+	
+	В рамках исследования был проведён анализ детерминированных и вероятностных методов проверки простоты чисел, в том числе алгоритма Миллера–Рабина. Практическая часть включает реализацию генератора больших простых чисел с использованием безопасной генерации случайных чисел и тестов на простоту.
+	
+	Результаты данной работы могут быть использованы при разработке программных решений в области криптографии, где критически важны надёжные и эффективно вычисляемые простые числа высокой разрядности.
+	
+	\newpage
+	\def\contentsname{Содержание}
+	
+	\tableofcontents
+	
+	\newpage
+	\section*{Введение}\addcontentsline{toc}{section}{Введение}
+\end{document}
