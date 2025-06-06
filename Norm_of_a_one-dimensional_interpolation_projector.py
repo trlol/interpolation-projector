@@ -20,7 +20,7 @@ def lagrange_basis(x, nodes, j):
             lj *= (x - nodes[m]) / (xj - nodes[m])
     return lj
 
-# Норма интерполяционного проектора ||P|| = max_{x\in[-1,1]} sum_j |l_j(x)|
+# Норма интерполяционного проектора ||P|| = max_{x in [-1,1]} sum_j |l_j(x)|
 def projector_norm(nodes, x_eval):
     n = len(nodes) - 1
     L = np.zeros_like(x_eval)
@@ -29,7 +29,7 @@ def projector_norm(nodes, x_eval):
     return np.max(L)
 
 # Главная функция вычислений
-def compute_norms(max_n=20):
+def compute_norms(max_n):
     x_eval = np.linspace(-1, 1, 1000)
     results = []
 
@@ -43,15 +43,24 @@ def compute_norms(max_n=20):
     df = pd.DataFrame(results, columns=["n", "Uniform Nodes", "Chebyshev Nodes"])
     return df
 
-# Выводим таблицу
+# Интерактивный ввод и запуск
 if __name__ == "__main__":
-    df = compute_norms(20)
+    try:
+        user_n = int(input("Введите максимальное значение степени интерполяционного многочлена n (например, 20): "))
+        if user_n <= 0:
+            raise ValueError("Число должно быть положительным.")
+    except ValueError as e:
+        print(f"Ошибка: {e}")
+        exit(1)
+
+    df = compute_norms(user_n)
+    print("\nРезультаты вычислений:\n")
     print(df)
 
-    # По желанию: сохранить в CSV или построить график
+    # Сохранение результатов
     df.to_csv("projector_norms.csv", index=False)
 
-    # График
+    # Построение графика
     plt.plot(df["n"], df["Uniform Nodes"], label="Равномерные узлы", marker="o")
     plt.plot(df["n"], df["Chebyshev Nodes"], label="Узлы Чебышёва", marker="x")
     plt.xlabel("n (степень интерполяционного многочлена)")
