@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.23)  4 JUN 2025 20:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.23)  7 JUN 2025 15:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -337,6 +337,15 @@ File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 \Gin@req@height=\dimen144
 \Gin@req@width=\dimen145
 )
+(D:\5ый курс\TeX\tex/latex/graphics\color.sty
+Package: color 2024/01/14 v1.3d Standard LaTeX Color (DPC)
+
+(D:\5ый курс\TeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+
+(D:\5ый курс\TeX\tex/latex/graphics\mathcolor.ltx))
 (D:\5ый курс\TeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2024/05/23 v2.17q AMS math features
 \@mathmargin=\skip51
@@ -583,16 +592,16 @@ Enter file name:
 ! Emergency stop.
 <read *> 
          
-l.14 \usepackage
+l.15 \usepackage
                 [a4paper, mag=1000, left=3cm, right=2cm, top=2cm, bottom=2cm...
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
- 11336 strings out of 473899
- 169524 string characters out of 5737149
- 565581 words of memory out of 5000000
- 34084 multiletter control sequences out of 15000+600000
+ 11405 strings out of 473899
+ 170843 string characters out of 5737149
+ 566762 words of memory out of 5000000
+ 34145 multiletter control sequences out of 15000+600000
  559173 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,0n,79p,258b,108s stack positions out of 10000i,1000n,20000p,200000b,200000s

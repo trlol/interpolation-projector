@@ -4,11 +4,13 @@ import matplotlib.pyplot as plt
 
 # Генерация равномерных узлов
 def uniform_nodes(n):
+    print(np.linspace(-1, 1, n + 1))
     return np.linspace(-1, 1, n + 1)
 
 # Генерация узлов Чебышева
 def chebyshev_nodes(n):
     k = np.arange(0, n + 1)
+    print(np.cos((2 * k + 1) * np.pi / (2 * (n + 1))))
     return np.cos((2 * k + 1) * np.pi / (2 * (n + 1)))
 
 # Вычисление базисного многочлена Лагранжа l_j(x)
@@ -33,7 +35,7 @@ def compute_norms(max_n):
     x_eval = np.linspace(-1, 1, 1000)
     results = []
 
-    for n in range(1, max_n + 1):
+    for n in range(0, max_n + 1):
         un_nodes = uniform_nodes(n)
         ch_nodes = chebyshev_nodes(n)
         norm_uniform = projector_norm(un_nodes, x_eval)
